@@ -319,13 +319,13 @@ window.addEventListener('load',function() {
                             // If player's shield are 0 or below than clear the canvas, draw a loosy message and clear all current loop.
                             if (game.player.shield <= 0) {                                
                                 game.ctx.clearRect(0, 0, game.canvas.width, game.canvas.height);
-                                game.ctx.font = '60px Arial';
+                                game.ctx.font = '40px Arial';
                                 game.ctx.fillStyle = '#FFFFFF';
-                                game.ctx.shadowColor = '#F01234';
-                                game.ctx.shadowBlur = 30;
-                                game.ctx.shadowOffsetX = 1;
-                                game.ctx.shadowOffsetY = 1;
-                                game.ctx.fillText('YOU LOSE', 250, 250);
+                                game.ctx.fillText('YOU LOSE!', 300, 150);
+                                game.ctx.fillText('PRESS SPACEBAR', 220, 220);
+                                game.ctx.fillText('TO RESTART THE GAME', 170, 270);
+                                
+                                // Reset the game.
                                 game.reset();
                             } else { 
                                 // Else subtract one to shield, update information on the screen and draw a transparent circle
